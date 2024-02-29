@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380394561573",
+    "project_id": "pro-gaming-26ebb",
+    "storage_bucket": "pro-gaming-26ebb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380394561573:android:1a737ee5d7f7cb45499fcc",
+        "android_client_info": {
+          "package_name": "com.example.pro_gamer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaAef8HcLiwmKDnNeEWz12hmZC1gHokk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

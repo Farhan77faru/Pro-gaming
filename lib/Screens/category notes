@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+
+class CategoryPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text('Categories', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
+      ),
+      body: ListView(
+        
+        children: [
+          Container(
+            child: CategoryCard(
+              
+              categoryName: 'Actions',
+              image: 'https://wallpaperaccess.com/full/2975793.jpg',
+              onTap: () {
+                // Handle action category tap
+              },
+            ),
+          ),
+          CategoryCard(
+            categoryName: 'Adventure',
+            image: 'https://cdn.wallpapersafari.com/21/77/Uc7GT5.jpg',
+            onTap: () {
+              // Handle adventure category tap
+            },
+          ),
+          CategoryCard(
+            categoryName: 'Puzzle',
+            image: 'https://wallpapercave.com/wp/31K91HR.jpg',
+            onTap: () {
+              // Handle puzzle category tap
+            },
+          ),
+          // Add more category cards as needed
+        ],
+      ),
+    );
+  }
+}
+
+class CategoryCard extends StatelessWidget {
+  final String categoryName;
+  final String image;
+  final VoidCallback onTap;
+
+  const CategoryCard({
+     key,
+    required this.categoryName,
+    required this.image,
+    required this.onTap,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Card(
+        color: Colors.black,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 180, // Fixed height for the card
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.network(
+                    image,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                categoryName,
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,color: Colors.white
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
